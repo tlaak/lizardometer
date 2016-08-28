@@ -7,6 +7,7 @@
     "babel-register": "^6.14.0",
     "expect.js": "^0.3.1",
     "mocha": "^3.0.2",
+    "nock": "^8.0.0",
     "react-scripts": "0.2.3"
   },
   "dependencies": {
