@@ -7,6 +7,14 @@
   z-index: 0;
 }
 
+.lizardometer__background {
+  bottom: 0;
+  height: 100px;
+  position: absolute;
+  width: 300px;
+  z-index: 0;
+}
+
 .lizardometer__pointer {
   height: auto;
   left: 0;

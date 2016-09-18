@@ -1,5 +1,6 @@
 import React from 'react';
 import arrow from './images/arrow.svg';
+import background from './images/background.svg';
 import './Meter.css';
 import { getData } from './api';
 import {
@@ -62,6 +63,8 @@ export const Meter = React.createClass({
           <span className="lizardometer__value">{currencyPrefix}{value}{currencySuffix}</span>
           <span className="lizardometer__value--max">{this.state.max}</span>
         </div>
+        <img src={background} role="presentation"
+          className="lizardometer__background" />
         <img src={arrow} role="presentation"
           className="lizardometer__pointer" style={{left: `calc(${pointerPosition}% - 10px`}} />
       </div>
