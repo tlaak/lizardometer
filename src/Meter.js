@@ -1,5 +1,5 @@
 import React from 'react';
-import arrow from './images/arrow.svg';
+import pointer from './images/pointer.svg';
 import background from './images/background.svg';
 import './Meter.css';
 import { getData } from './api';
@@ -65,8 +65,9 @@ export const Meter = React.createClass({
         </div>
         <img src={background} role="presentation"
           className="lizardometer__background" />
-        <img src={arrow} role="presentation"
-          className="lizardometer__pointer" style={{left: `calc(${pointerPosition}% - 10px`}} />
+        {/* Subtract 50% of the pointer width from the position to prevent position outside of the container */}
+        <img src={pointer} role="presentation"
+          className="lizardometer__pointer" style={{left: `calc(${pointerPosition}% - 5px`}} />
       </div>
     );
   }
