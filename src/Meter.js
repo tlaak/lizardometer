@@ -1,6 +1,7 @@
 import React from 'react';
 import gradient from './images/red-green-gradient.svg';
 import arrow from './images/arrow.svg';
+import './Meter.css';
 
 export const Meter = React.createClass({
   meterData: {
