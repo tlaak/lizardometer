@@ -34,7 +34,7 @@ describe('helpers', () => {
     });
 
     // Error situation: value larger than max
-    it('should return 0', (done) => {
+    it('should return 100', (done) => {
       expect(getPointerPosition(1000, 0, 500)).to.equal(100);
       done();
     });
