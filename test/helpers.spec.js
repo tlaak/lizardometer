@@ -1,6 +1,6 @@
 import {
   getPointerPosition,
-  mapCurrencyToSymbol
+  getCurrencySymbol
 } from '../src/helpers';
 import expect from 'expect.js';
 
@@ -43,22 +43,22 @@ describe('helpers', () => {
   // Test if mapping currency codes to symbols works correctly
   describe('mapCurrencyToSymbol', (done) => {
     it('should return $', (done) => {
-      expect(mapCurrencyToSymbol('USD')).to.eql('$');
+      expect(getCurrencySymbol('USD')).to.eql('$');
       done();
     });
 
     it('should return £', (done) => {
-      expect(mapCurrencyToSymbol('GBP')).to.eql('£');
+      expect(getCurrencySymbol('GBP')).to.eql('£');
       done();
     });
 
     it('should return €', (done) => {
-      expect(mapCurrencyToSymbol('EUR')).to.eql('€');
+      expect(getCurrencySymbol('EUR')).to.eql('€');
       done();
     });
 
     it('should return CHF', (done) => {
-      expect(mapCurrencyToSymbol('CHF')).to.eql('CHF');
+      expect(getCurrencySymbol('CHF')).to.eql('CHF');
       done();
     });
   });
