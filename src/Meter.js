@@ -4,12 +4,14 @@ import './Meter.css';
 import { getData } from './api';
 
 export const Meter = React.createClass({
-
+  // Default values for the meter
   getInitialState() {
     return {
       'min': 0,
       'value': 0,
-      'max': 1000
+      'max': 1000,
+      'format': '',
+      'unit': ''
     };
   },
 
