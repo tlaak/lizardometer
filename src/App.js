@@ -1,15 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { getData } from './api';
 import Meter from './Meter';
 
-class App extends Component {
-  componentDidMount() {
-    getData()
-      .then((response) => {
-        console.log('response', response);
-      });
-  }
+export const App = React.createClass({
 
   render() {
     return (
@@ -18,6 +11,6 @@ class App extends Component {
       </div>
     );
   }
-}
+});
 
 export default App;

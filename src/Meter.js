@@ -2,22 +2,36 @@ import React from 'react';
 import gradient from './images/red-green-gradient.svg';
 import arrow from './images/arrow.svg';
 import './Meter.css';
+import { getData } from './api';
 
 export const Meter = React.createClass({
-  meterData: {
-    'min': 383,
-    'value': 640,
-    'max': 897,
-    'format': 'currency',
-    'unit': 'GBP'
+
+  getInitialState() {
+    return {
+      'min': 0,
+      'value': 0,
+      'max': 1000
+    };
   },
 
-  // convert 897 to 100%
-  // convert 383 to 0%
+  componentDidMount() {
+    getData()
+      .then((response) => {
+        this.setState({
+          min: response.min,
+          max: response.max,
+          value: response.value
+        });
+      })
+      .catch((error) => {
+        console.error('Error when fetching meter data', error);
+      });
+  },
 
   render() {
     const pointerPosition =
-      (this.meterData.value - this.meterData.min) / (this.meterData.max - this.meterData.min) * 100;
+      (this.state.value - this.state.min) /
+      (this.state.max - this.state.min) * 100;
 
     return (
       <div className="lizardometer">
