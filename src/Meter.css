@@ -1,10 +1,9 @@
-.lizardometer {
-  max-width: 300px;
+.lizardometer__container {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  height: 100px;
   position: relative;
-}
-
-.lizardometer__background {
-  position: relative;
+  width: 300px;
   z-index: 0;
 }
 
@@ -12,7 +11,33 @@
   height: auto;
   left: 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   width: 20px;
   z-index: 1;
+}
+
+.lizardometer__values {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.lizardometer__value {
+  display: inline-block;
+  flex: 1 0 auto;
+  font-size: 2em;
+  text-align: center;
+}
+
+.lizardometer__value--min {
+  display: inline-block;
+  flex: 1 0 auto;
+  text-align: left;
+}
+
+.lizardometer__value--max {
+  display: inline-block;
+  flex: 1 0 auto;
+  text-align: right;
 }
