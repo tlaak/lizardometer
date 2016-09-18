@@ -6,7 +6,7 @@ export const App = React.createClass({
 
   render() {
     return (
-      <div className="meter">
+      <div className="application-wrapper">
         <Meter />
       </div>
     );
