@@ -34,7 +34,7 @@
 .lizardometer__value {
   display: inline-block;
   flex: 1 0 auto;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
 }
 
