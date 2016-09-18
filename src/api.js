@@ -6,10 +6,9 @@ const apiEndpoint = 'https://widgister.herokuapp.com/challenge/frontend';
 export function getData() {
   return axios.get(apiEndpoint)
     .then((response) => {
-      console.log(response.data);
       return response.data;
     })
     .catch((error) => {
-      console.log(error);
+      throw error;
     });
 }

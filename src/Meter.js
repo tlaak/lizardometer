@@ -33,8 +33,7 @@ export const Meter = React.createClass({
         });
       })
       .catch((error) => {
-        // Not sure what kind of errors it's possible to get...
-        console.error('Error when fetching meter data', error);
+        console.error('Error when fetching data from the API', error);
       });
   },
 
